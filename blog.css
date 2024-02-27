@@ -13,7 +13,7 @@ h1 {
 
 /* Navigation Tab Buttons */
 #tab_bar {
-    background-color: #007bb5; /* Adjusted blue color for better contrast */
+    background-color: #ff3333; /* Adjusted red color for better contrast */
     display: flex;
     justify-content: space-around;
     padding: 10px;
@@ -21,8 +21,8 @@ h1 {
 }
 
 .tabButton {
-    background-color: #007bb5; /* Adjusted blue color for better contrast */
-    color: #fff; /* White text to contrast with the blue background */
+    background-color: #ff3333; /* Adjusted red color for better contrast */
+    color: #fff; /* White text to contrast with the red background */
     border: none;
     padding: 10px 15px;
     font-size: 16px;
@@ -39,7 +39,7 @@ h1 {
 /* Hover effect */
 .tabButton:hover,
 .tabButton:focus {
-    background-color: #005d8e; /* Adjusted slightly darker blue on hover or focus */
+    background-color: #cc0000; /* Adjusted slightly darker red on hover or focus */
 }
 
 .post {
@@ -69,13 +69,13 @@ h1 {
 }
 
 #projects a {
-    color: #007bb5; /* Adjusted blue color for the links */
+    color: #ff3333; /* Adjusted red color for the links */
     font-weight: bold; /* Make the link text bold */
     transition: color 0.3s; /* Smooth transition for link color change */
 }
 
 #projects a:hover {
-    color: #005d8e; /* Adjusted slightly darker blue on hover */
+    color: #cc0000; /* Adjusted slightly darker red on hover */
 }
 
 table {
@@ -120,7 +120,7 @@ th {
 #commentForm button {
     margin-top: 10px;
     padding: 5px 10px;
-    background-color: #007bb5; /* Adjusted blue color for the button */
+    background-color: #ff3333; /* Adjusted red color for the button */
     color: #fff;
     border: none;
     border-radius: 5px;
