@@ -238,3 +238,29 @@ th {
 
 /* end of custom scroll bar */
 
+/* Presentation button on about section */
+.presentation-button {
+    display: block; /* Change display property to block */
+    padding: 8px 20px; /* Adjusted padding for smaller size */
+    color: #ff3333; /* Red color for button text */
+    background-color: transparent;
+    border: 1px solid #ff3333; /* Reduced border size */
+    font-size: 1.2rem; /* Smaller font size */
+    text-transform: uppercase;
+    letter-spacing: 0.05rem; /* Reduced letter spacing */
+    margin: 10px auto; /* Set top and bottom margin to 10px and left and right margin to auto for centering */
+    transition: 0.3s ease;
+    transition-property: background-color, color;
+    border-radius: 3px; /* Reduced border radius */
+    cursor: pointer;
+    text-decoration: none; /* Remove hyperlink underline */
+}
+
+.presentation-button:hover {
+    color: #fff; /* White text on hover */
+    background-color: #ff3333; /* Red background on hover */
+}
+
+
+/* End Presentation button on about section */
+
