@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JuliaBaysCPS592</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
         integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <script src="/socket.io/socket.io.js"></script>
@@ -197,9 +198,47 @@
         <li>A viewer can view a concatenated string output from the randomized generator.</li>
         <br>
         <strong>Use Cases:</strong>
-        <p><b>Viewer Use Case:</b>This is an overview of what a viewer can do using our web application.
-        </p>
+        <p><b>Viewer Use Case:</b>This is an overview of what a viewer can do using our web application.</p>
+        <!--Insert picture 1-->
         
+        <strong>Use Case: UV1 View all webpages</strong>
+        <!--Insert picture 2-->
+        <p><b>Description:</b>The system allows a viewer to view and navigate all web pages on the web application. </p>
+        <p><b>Actor(s):</b>Viewer </p>  
+        <p><b>Triggering Event:</b>The user navigates to a different page using the navigation panel.</p>  
+        <p><b>Stakeholders:</b>N/A</p> 
+        <p><b>Preconditions</b>The user must have clicked on a page to navigate to on the navigation panel.</p> 
+        <p><b>Post Conditions:</b>The correctly chosen web page appears.</p> 
+        <br>
+        <strong>Use Case: UV2 Click on generator(s)</strong>
+        <!--Insert picture 3-->
+        <p><b>Description:</b>The system allows a viewer to click on the various generators to gain the output of a randomized word related to that generator topic.</p>
+        <p><b>Actor(s):</b>Viewer </p>  
+        <p><b>Triggering Event:</b>The user clicks on one generator or the randomize all generators button.</p>  
+        <p><b>Stakeholders:</b>N/A</p> 
+        <p><b>Preconditions</b>The user must have clicked on the button to run one generator button or all the generators button.</p> 
+        <p><b>Post Conditions:</b>A word comes as an output for each specified generator.</p> 
+
+        <br>
+        <strong>Use Case: UV3 Input word into generator(s)</strong>
+        <!--Insert picture 4-->
+        <p><b>Description:</b>The system allows a viewer to input/add word(s) into the generator(s) database.</p>
+        <p><b>Actor(s):</b>Viewer </p>  
+        <p><b>Triggering Event:</b>The user clicks on add a word to a specific generator and inputs a word regarding the generator's topic.</p>  
+        <p><b>Stakeholders:</b>N/A</p> 
+        <p><b>Preconditions</b>The user must have clicked on the add button to a specific generator and input a word.</p> 
+        <p><b>Post Conditions:</b>An alert pops up saying that the word is added to that generator’s database.       </p> 
+
+        <br>
+        <strong>Use Case: UV4 View generated concatenated string</strong>
+        <!--Insert picture 5-->
+        <p><b>Description:</b>The system allows a viewer to generate a concatenated string by running all of the generators.</p>
+        <p><b>Actor(s):</b>Viewer </p>  
+        <p><b>Triggering Event:</b>The user clicks on all of the generator's randomized buttons or the randomized all button.</p>  
+        <p><b>Stakeholders:</b>N/A</p> 
+        <p><b>Preconditions</b>The user must have clicked on all of the generator’s randomized buttons or the randomized all button.</p> 
+        <p><b>Post Conditions:</b>The concatenated string of words appears as the output. </p> 
+
 
         <h4 id="conclusion">Conclusion:</h4>
 
@@ -232,6 +271,9 @@
         <li>Konor Tice</li>
         <!-- Add your content here -->
     </div>
+
+    <!-- Back to Top button -->
+<button onclick="topFunction()" id="upButton" title="Go to top"><i class="fa fa-arrow-circle-o-up"></i></button>
 
 </main>
 

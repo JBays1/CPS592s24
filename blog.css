@@ -192,3 +192,24 @@ th {
     color: #000; /* Dark text color on hover */
 }
 
+/* Up button css*/
+#upButton,
+#printButton {
+    position: fixed;
+    bottom: 30px;
+    /* Adjust as needed */
+    background-color: transparent;
+    border: none;
+    color: var(--dark-bg-color);
+    font-size: 35px;
+    /* Adjust as needed */
+    cursor: pointer;
+    outline: none;
+}
+
+#upButton {
+    right: 20px;
+    color: var(--dark-bg-color);
+    /* Adjust as needed */
+}
+
