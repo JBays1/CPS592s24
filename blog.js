@@ -28,37 +28,93 @@ document.getElementById("tab3").addEventListener("click", function(event) {
     showTab("contributors");
 });
 
-/* Comment function */
-function submitComment() {
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var comment = document.getElementById("comment").value;
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
-    if (comment.trim() !== "") {
-        // Display the alert
-        alert("Thank you for your comment!");
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
-        // Display the comment below
-        var commentsContainer = document.getElementById("comments");
-        var newComment = document.createElement("div");
-        newComment.classList.add("comment");
+let mybutton = document.getElementById("upButton");
 
-        var commenterInfo = document.createElement("p");
-        commenterInfo.innerHTML = "<span class='name'>Name: " + name + "</span>, <span class='email'>Email: " + email + "</span>";
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+  scrollFunction();
+};
 
-        var commentContent = document.createElement("p");
-        commentContent.textContent = comment;
-
-        newComment.appendChild(commenterInfo);
-        newComment.appendChild(commentContent);
-        commentsContainer.appendChild(newComment);
-
-        // Clear the form fields after submitting
-        document.getElementById("name").value = "";
-        document.getElementById("email").value = "";
-        document.getElementById("comment").value = "";
-    } else {
-        alert("Please enter a comment before submitting.");
-    }
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
 }
 
+// When the user clicks on the button, scroll to the top of the document with easing
+function topFunction() {
+  scrollToTop(document.documentElement, 0, 800); // 800 milliseconds for the easing effect
+}
+
+// Smooth scroll function with easing
+function scrollToTop(element, to, duration) {
+  const start = element.scrollTop;
+  const change = to - start;
+  let currentTime = 0;
+  const increment = 20;
+
+  function easeInOutQuad(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+  }
+
+  function animateScroll() {
+    currentTime += increment;
+    const val = easeInOutQuad(currentTime, start, change, duration);
+    element.scrollTop = val;
+    if (currentTime < duration) {
+      requestAnimationFrame(animateScroll);
+    }
+  }
+
+  animateScroll();
+}
+
+// Accessibility Buttons
+$("#fontUp").click(function() {
+  pSize = parseInt($('.paragraph').css('font-size'));
+  pSize = pSize + 6;
+$('.paragraph').css('font-size', pSize);
+  cSize = parseInt($('.caption').css('font-size'));
+  cSize = cSize + 6;
+  $('.caption').css('font-size', cSize);
+});
+
+$("#fontDown").click(function() {
+  pSize = parseInt($('.paragraph').css('font-size'));
+  pSize = pSize - 6;
+$('.paragraph').css('font-size', pSize);
+  cSize = parseInt($('.caption').css('font-size'));
+  cSize = cSize - 6;
+  $('.caption').css('font-size', cSize);
+});
+
+$("#imageUp").click(function() {
+  img = parseInt($('img').css('width'));
+  img += 10;
+  $('img').css('width', img);
+});
+
+$("#imageDown").click(function() {
+  img = parseInt($('img').css('width'));
+  img -= 10;
+  $('img').css('width', img);
+});
