@@ -147,3 +147,48 @@ th {
 .comment .email {
     font-weight: bold;
 }
+
+ /* Centering the h3 element */
+ h3 {
+    text-align: center;
+}
+
+/* Table of Contents */
+#toc {
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added shadow for better visibility */
+}
+
+#toc strong {
+    display: block;
+    text-align: center; /* Center the "Table of Contents" text */
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#toc ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#toc ul li {
+    margin-bottom: 5px;
+}
+
+#toc a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for better user experience */
+}
+
+#toc a:hover {
+    background-color: #ccc; /* Light gray background on hover */
+    color: #000; /* Dark text color on hover */
+}
+
