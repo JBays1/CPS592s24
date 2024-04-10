@@ -90,26 +90,57 @@ function scrollToTop(element, to, duration) {
 
 // Accessibility Buttons
 $("#fontUp").click(function() {
-  pSize = parseInt($('.paragraph').css('font-size'));
-  pSize = pSize + 6;
-$('.paragraph').css('font-size', pSize);
-  cSize = parseInt($('.caption').css('font-size'));
-  cSize = cSize + 6;
-  $('.caption').css('font-size', cSize);
+    // Increase font size by 2px for paragraphs
+    pSize = parseInt($('p').css('font-size'));
+    pSize += 2;
+    $('p').css('font-size', pSize + 'px');
+    
+    // Increase font size by 2px for headings (h1, h2, h3, h4)
+    $('h1, h2, h3, h4').each(function() {
+        var hSize = parseInt($(this).css('font-size'));
+        hSize += 2;
+        $(this).css('font-size', hSize + 'px');
+    });
+    
+    // Increase font size by 2px for list items (li)
+    liSize = parseInt($('li').css('font-size'));
+    liSize += 2;
+    $('li').css('font-size', liSize + 'px');
+    
+    // Increase font size by 2px for strong elements
+    strongSize = parseInt($('strong').css('font-size'));
+    strongSize += 2;
+    $('strong').css('font-size', strongSize + 'px');
 });
 
 $("#fontDown").click(function() {
-  pSize = parseInt($('.paragraph').css('font-size'));
-  pSize = pSize - 6;
-$('.paragraph').css('font-size', pSize);
-  cSize = parseInt($('.caption').css('font-size'));
-  cSize = cSize - 6;
-  $('.caption').css('font-size', cSize);
+    // Decrease font size by 2px for paragraphs
+    pSize = parseInt($('p').css('font-size'));
+    pSize -= 2;
+    $('p').css('font-size', pSize + 'px');
+    
+    // Decrease font size by 2px for headings (h1, h2, h3, h4)
+    $('h1, h2, h3, h4').each(function() {
+        var hSize = parseInt($(this).css('font-size'));
+        hSize -= 2;
+        $(this).css('font-size', hSize + 'px');
+    });
+    
+    // Decrease font size by 2px for list items (li)
+    liSize = parseInt($('li').css('font-size'));
+    liSize -= 2;
+    $('li').css('font-size', liSize + 'px');
+    
+    // Decrease font size by 2px for strong elements
+    strongSize = parseInt($('strong').css('font-size'));
+    strongSize -= 2;
+    $('strong').css('font-size', strongSize + 'px');
 });
+
 
 $("#imageUp").click(function() {
   img = parseInt($('img').css('width'));
-  img += 10;
+  img += 100;
   $('img').css('width', img);
 });
 
