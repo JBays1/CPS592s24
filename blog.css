@@ -11,6 +11,43 @@ h1 {
     text-align: center; /* Center the h1 text */
 }
 
+/* Adjust font size for heading tags */
+h1, h2, h3, h4, li, strong {
+    font-size: 24px; /* Change font size as needed */
+}
+
+/* Adjust font size for paragraphs */
+p {
+    font-size: 20px; /* Change font size as needed */
+}
+
+/* Adjust image size */
+img {
+    width: 800%; /* Set default width for images */
+}
+
+#accessibility {
+    position: fixed; /* Make the accessibility div fixed */
+    bottom: 30px; /* Align it with the bottom like the print button */
+    left: 60px; /* Position it to the right of the print button */
+    text-align: center; /* Center align the buttons */
+}
+
+#accessibility button {
+    margin: 5px; /* Add spacing between buttons */
+    background-color: #ff3333; /* Red color for buttons */
+    color: #fff; /* White color for text */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#accessibility button:hover {
+    background-color: #cc0000; /* Darker red color on hover */
+}
+
+
 /* Navigation Tab Buttons */
 #tab_bar {
     background-color: #ff3333; /* Adjusted red color for better contrast */
