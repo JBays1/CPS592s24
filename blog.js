@@ -149,3 +149,23 @@ $("#imageDown").click(function() {
   img -= 10;
   $('img').css('width', img);
 });
+
+// Random word generator
+
+var btn = document.getElementById("generateButton");
+var out = document.getElementById("output");
+
+btn.addEventListener("click", getWord);
+
+function getWord() {
+    var theWord = [
+        'dog', 'potato', 'cow', 'parrot', 'stone', 'watch', 'house', 'bioluminescence',
+        'brake', 'potato/salad', 'trip', 'hippopotamus', 'mask', 'chicken',
+        'Pneumonoultramicroscopicsilicovolcanoconiosis'
+    ];
+
+    var wordNum = Math.floor(Math.random() * theWord.length);
+
+    var output = document.getElementById("output");
+    output.innerHTML = "<h2>" + theWord[wordNum] + "</h2>";
+}
