@@ -158,14 +158,31 @@ var out = document.getElementById("output");
 btn.addEventListener("click", getWord);
 
 function getWord() {
-    var theWord = [
-        'dog', 'potato', 'cow', 'parrot', 'stone', 'watch', 'house', 'bioluminescence',
-        'brake', 'potato/salad', 'trip', 'hippopotamus', 'mask', 'chicken',
-        'Pneumonoultramicroscopicsilicovolcanoconiosis'
-    ];
+    // var theWord = [
+    //     'dog', 'potato', 'cow', 'parrot', 'stone', 'watch', 'house', 'bioluminescence',
+    //     'brake', 'potato/salad', 'trip', 'hippopotamus', 'mask', 'chicken',
+    //     'Pneumonoultramicroscopicsilicovolcanoconiosis'
+    // ];
 
-    var wordNum = Math.floor(Math.random() * theWord.length);
+    // var wordNum = Math.floor(Math.random() * theWord.length);
+
+    // var output = document.getElementById("output");
+    // output.innerHTML = "<h2>" + theWord[wordNum] + "</h2>";
+
+    
+    var list1 = document.getElementById("AccConcern").value;
+    var result = list1.substring(0,5);
+
+    var AccConcern = document.getElementById('AccConcern').value.split(',').map(item => item.trim());
+    var UserGroup = document.getElementById('UserGroup').value.split(',').map(item => item.trim());
+    var Activity = document.getElementById('Activity').value.split(',').map(item => item.trim());
+    var Device = document.getElementById('Device').value.split(',').map(item => item.trim());
+
+    var rand1 = Math.floor(Math.random() * AccConcern.length);
+    var rand2 = Math.floor(Math.random() * UserGroup.length);
+    var rand3 = Math.floor(Math.random() * Activity.length);
+    var rand4 = Math.floor(Math.random() * Device.length);
 
     var output = document.getElementById("output");
-    output.innerHTML = "<h2>" + theWord[wordNum] + "</h2>";
+    output.innerHTML += "Create a solution for " + AccConcern[rand1] + " " + UserGroup[rand2] + " enjoying " + Activity[rand3] + "using a " + Device[rand4] + "<br>";
 }
