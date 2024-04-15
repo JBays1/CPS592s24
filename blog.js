@@ -184,5 +184,5 @@ function getWord() {
     var rand4 = Math.floor(Math.random() * Device.length);
 
     var output = document.getElementById("output");
-    output.innerHTML += "Create a solution for " + AccConcern[rand1] + " " + UserGroup[rand2] + " enjoying " + Activity[rand3] + "using a " + Device[rand4] + "<br>";
+    output.innerHTML += "<p>" + "Create a solution for " + AccConcern[rand1] + " " + UserGroup[rand2] + " enjoying " + Activity[rand3] + " using a " + Device[rand4] + "</p>" + "<br>";
 }
