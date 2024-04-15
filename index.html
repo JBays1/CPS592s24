@@ -41,6 +41,27 @@
         <div>
             <button id="generateButton">Generate</button>
         </div>
+        <div class="container">
+            <h2>Array Matching</h2>
+            <form id="arrayForm">
+                <label for="array1">Array 1:</label>
+                <input type="text" id="array1" name="array1" placeholder="Enter items separated by commas">
+        
+                <label for="array2">Array 2:</label>
+                <input type="text" id="array2" name="array2" placeholder="Enter items separated by commas">
+        
+                <label for="array3">Array 3:</label>
+                <input type="text" id="array3" name="array3" placeholder="Enter items separated by commas">
+        
+                <label for="array4">Array 4:</label>
+                <input type="text" id="array4" name="array4" placeholder="Enter items separated by commas">
+        
+                <button type="button" onclick="matchArrays()">Match Arrays</button>
+            </form>
+        
+            <h3>Matched Pairs:</h3>
+            <ul id="matchedPairs"></ul>
+        </div>
         <div id="output"></div>
     </div>
 
