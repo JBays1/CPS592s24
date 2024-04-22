@@ -185,4 +185,5 @@ function getWord() {
 
     var output = document.getElementById("output");
     output.innerHTML += "<p>" + "Create a solution for " + AccConcern[rand1] + " " + UserGroup[rand2] + " enjoying " + Activity[rand3] + " using a " + Device[rand4] + "</p>" + "<br>";
-}
+    alert("New Idea Generated");
+  }
