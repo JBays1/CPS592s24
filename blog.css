@@ -27,11 +27,8 @@ img {
     width: 800%; /* Set default width for images */
 }
 
-input[type="text"] {
+#textarea {
     font-size:24px;
-    text-wrap: wrap;
-    height: 300px;
-    width: 500px;
 }
 
 #accessibility {
