@@ -27,6 +27,10 @@ img {
     width: 800%; /* Set default width for images */
 }
 
+input[type="text"] {
+    font-size:24px;
+}
+
 #accessibility {
     position: fixed; /* Make the accessibility div fixed */
     bottom: 30px; /* Align it with the bottom like the print button */
