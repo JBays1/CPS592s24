@@ -31,6 +31,11 @@ textarea {
     font-size:24px;
 }
 
+input[type="text"] {
+    width: 500px;
+    height: 200px;
+}
+
 #accessibility {
     position: fixed; /* Make the accessibility div fixed */
     bottom: 30px; /* Align it with the bottom like the print button */
