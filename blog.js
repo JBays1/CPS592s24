@@ -123,6 +123,11 @@ $("#fontDown").click(function() {
     pSize = parseInt($('p').css('font-size'));
     pSize -= 2;
     $('p').css('font-size', pSize + 'px');
+
+    // Decrease font size by 2px for textarea inputs
+    a = parseInt($('textarea').css('font-size'));
+    a -= 2;
+    $('textarea').css('font-size', a + 'px');
     
     // Decrease font size by 2px for headings (h1, h2, h3, h4)
     $('h1, h2, h3, h4').each(function() {
